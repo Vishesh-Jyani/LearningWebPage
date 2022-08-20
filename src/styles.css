@@ -20,9 +20,11 @@ header {
     width: 100%;
     position: sticky;
     top: 0;
+    justify-content: space-between;
+    align-items: flex-end;
     background-color: var(--header-bg-color);
     box-shadow: 0 5px 10px rgb(161, 126, 28); ;
-    padding: 10px 5px 10px;
+    padding: 5px 10px 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     color: white;
@@ -33,12 +35,11 @@ h1::first-letter {
 }
 
 .search-bar {
-    float:right;
-    align-self: center;
     border: 1px solid black;
     border-radius: 10px;
     background-color: white;
     padding: 3px;
+    margin-bottom: 4px;
 }
 
 .search-bar input {
@@ -60,7 +61,6 @@ h1::first-letter {
 }
 
 .add-item {
-    margin: auto;
     border-radius: 10px;
     padding: 5px;
     font-size: 1.5em;
@@ -78,7 +78,7 @@ h1::first-letter {
 
 .grocery-list-items li {
     border: 2px solid var(--el-bg-color);
-    width: 50vw;
+    width: min(50vw,500px);
     margin: 10px 0;
     padding: 10px;
     border-radius: 7px;
@@ -102,5 +102,19 @@ h1::first-letter {
 .list-item-content span:nth-of-type(2) {
     font-weight: lighter;
     color: grey;
+}
+
+.remove-button {
+    background-color: pink;
+    padding: 3px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+}
+
+.remove-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px;
+    background-color: rgb(242, 182, 193);
 }
 

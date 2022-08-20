@@ -10,6 +10,17 @@ groceryItems.forEach(item => {
     <br>
     <span>Quantity: ${item.quantity}</span>
     </div>
+    <button class="remove-button">
+    Remove
+    </button>
     `
     groceryListItems.appendChild(listItem);
 })
+
+const removeButtons = document.querySelectorAll(".remove-button")
+
+function removeItem(e) {
+    const listItem = e.target.parentNode;
+    listItem.remove();
+}
+removeButtons.forEach(button => button.addEventListener("click", removeItem))
