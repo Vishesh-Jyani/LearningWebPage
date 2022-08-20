@@ -13,6 +13,7 @@
 body {
     background-color: var(--body-bg-color);
     font-family: 'Didot';
+    /* opacity: 0.5; */
 }
 
 header {
@@ -104,17 +105,36 @@ h1::first-letter {
     color: grey;
 }
 
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px;
+}
+
 .remove-button {
     background-color: pink;
     padding: 3px;
     font-weight: 500;
     border-radius: 5px;
-    border: none;
+    border: 0px;
 }
 
 .remove-button:hover {
-    cursor: pointer;
-    box-shadow: 0 0 2px;
     background-color: rgb(242, 182, 193);
+}
+
+form.add-item-form {
+    width: 30vw;
+    height: max(300px, 30vh);
+    position: fixed;
+    top: 20vh;
+    left: 35vw;
+    margin: auto;
+    opacity: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 1000px 200px rgb(192, 154, 4);
+    display: none;
 }
 
