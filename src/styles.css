@@ -80,6 +80,9 @@ h1::first-letter {
     padding: 10px;
     border-radius: 7px;
     background-color: var(--el-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .list-item-content {
@@ -87,7 +90,7 @@ h1::first-letter {
     border: 1px solid;
     background-color: white;
     padding: 5px;
-    width: 80%;
+    width: 85%;
     border-radius: 7px;
 }
 
@@ -107,15 +110,18 @@ button:hover {
 }
 
 .remove-button {
-    background-color: pink;
-    padding: 3px;
+    display: inline-block;
+    /* padding: 3px; */
     font-weight: 500;
     border-radius: 5px;
-    border: 0px;
+    background-color: transparent;
+    font-size: 2em;
+    border: none;
+    outline: none;
 }
 
 .remove-button:hover {
-    background-color: rgb(242, 182, 193);
+    box-shadow: none;
 }
 
 form.add-item-form {

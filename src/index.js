@@ -11,10 +11,10 @@ function addItemToGroceryList(groceryItem) {
     <span>Quantity: ${groceryItem.quantity}</span>
     </div>
     <button class="remove-button">
-    Remove
+    ❎
     </button>
     `
-
+// 🗑️
     const removeButton = listItem.querySelector('.remove-button');
     removeButton.addEventListener('click',()=>{
         listItem.remove();
