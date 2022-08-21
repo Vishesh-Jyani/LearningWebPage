@@ -30,6 +30,16 @@ const addItemButton = document.querySelector(".add-item")
 
 const addItemForm = document.querySelector('.add-item-form');
 
+const addItemCross = addItemForm.querySelector(".cross-icon");
+
+addItemCross.addEventListener('click', (e)=>{
+    const itemName = addItemForm.querySelector("input[name='item-name']");
+    const itemQuantity = addItemForm.querySelector("input[name='item-quantity']");
+    itemName.value = '';
+    itemQuantity.value = '';
+    addItemForm.style.display = 'none'
+})
+
 addItemButton.addEventListener('click', (e)=>{
     e.stopPropagation()
     addItemForm.style.display = 'block'

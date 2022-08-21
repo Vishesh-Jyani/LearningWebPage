@@ -129,7 +129,7 @@ form.add-item-form {
     background-color: white;
     border: 1px solid black;
     box-shadow: 0 0 1000px 20px rgb(131, 106, 4);
-    /* display: none; */
+    display: none;
 }
 
 form h3 {
@@ -150,6 +150,7 @@ form input {
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
+    margin-bottom: 8px;
     font-size: 14px;
     font-weight: 300;
 }
@@ -157,12 +158,19 @@ form input {
 form button {
     margin-top: 50px;
     width: 100%;
-    background-color: #ffffff;
-    color: #080710;
+    background-color: green;
+    color: white;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+form span.cross-icon {
+    position: absolute;
+    top: 2px;
+    right: 2px;
     cursor: pointer;
 }
 
