@@ -49,7 +49,7 @@ h1::first-letter {
     padding-bottom: 4px; 
 }
 
-.search-bar input:focus::placeholder {
+input:focus::placeholder {
     color: transparent;
 }
 
@@ -129,12 +129,11 @@ form.add-item-form {
     top: 20vh;
     left: 35vw;
     margin: auto;
-    opacity: 1;
     padding: 20px;
     border-radius: 10px;
     background-color: white;
     border: 1px solid black;
-    box-shadow: 0 0 1000px 200px rgb(192, 154, 4);
+    box-shadow: 0 0 1000px 20px rgb(131, 106, 4);
     display: none;
 }
 

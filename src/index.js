@@ -1,31 +1,29 @@
 import groceryItems, { GroceryItem } from "./data.js";
 
 const groceryListItems = document.querySelector('.grocery-list-items')
-// Display static grocery items from dataset
-groceryItems.forEach(item => {
+
+function addItemToGroceryList(groceryItem) {
     const listItem = document.createElement('li');
     listItem.innerHTML = `
     <div class="list-item-content">
-    <span>${item.name}</span>
+    <span>${groceryItem.name}</span>
     <br>
-    <span>Quantity: ${item.quantity}</span>
+    <span>Quantity: ${groceryItem.quantity}</span>
     </div>
     <button class="remove-button">
     Remove
     </button>
     `
+
+    const removeButton = listItem.querySelector('.remove-button');
+    removeButton.addEventListener('click',()=>{
+        listItem.remove();
+    })
+
     groceryListItems.appendChild(listItem);
-})
-
-const removeButtons = document.querySelectorAll(".remove-button")
-
-// Remove logic
-function removeItem(e) {
-    const listItem = e.target.parentNode;
-    listItem.remove();
 }
-
-removeButtons.forEach(button => button.addEventListener("click", removeItem))
+// Display static grocery items from dataset
+groceryItems.forEach(item => addItemToGroceryList(item))
 
 // Add logic
 const addItemButton = document.querySelector(".add-item")
@@ -40,4 +38,19 @@ addItemButton.addEventListener('click', (e)=>{
 document.addEventListener('click', (e)=>{
     if(e.target.closest('form') !== addItemForm)
         addItemForm.style.display = 'none'
+})
+
+addItemForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    console.log("submitted")
+    const itemName = addItemForm.querySelector("input[name='item-name']");
+    const itemQuantity = addItemForm.querySelector("input[name='item-quantity']");
+    if(!itemName.value || !itemQuantity.value){
+        alert('Please fill the form correctly!')
+        return;
+    }
+    addItemToGroceryList(new GroceryItem(itemName.value, itemQuantity.value));
+    itemName.value = '';
+    itemQuantity.value = '';
+    addItemForm.style.display = 'none'
 })
