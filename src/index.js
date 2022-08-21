@@ -19,7 +19,7 @@ function addItemToGroceryList(groceryItem) {
     removeButton.addEventListener('click',()=>{
         listItem.remove();
     })
-
+    listItem.focus()
     groceryListItems.appendChild(listItem);
 }
 // Display static grocery items from dataset
@@ -42,7 +42,6 @@ document.addEventListener('click', (e)=>{
 
 addItemForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-    console.log("submitted")
     const itemName = addItemForm.querySelector("input[name='item-name']");
     const itemQuantity = addItemForm.querySelector("input[name='item-quantity']");
     if(!itemName.value || !itemQuantity.value){
