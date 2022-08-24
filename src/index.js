@@ -17,7 +17,11 @@ function addItemToGroceryList(groceryItem, notInitialRender) {
 // 🗑️
     const removeButton = listItem.querySelector('.remove-button');
     removeButton.addEventListener('click',()=>{
-        listItem.remove();
+        listItem.style.opacity = '0'
+        listItem.style.transition = 'opacity 300ms ease-in-out'
+        listItem.addEventListener('transitionend',()=>{
+            listItem.remove();
+        },{once: true})
     })
     if(notInitialRender){
         setTimeout(()=>listItem.scrollIntoView({behavior: 'smooth', block: 'center'}),0)
