@@ -24,7 +24,9 @@ function addItemToGroceryList(groceryItem, notInitialRender) {
         },{once: true})
     })
     if(notInitialRender){
+        listItem.style.animation = 'noticeMe 1000ms ease-in-out 2'
         setTimeout(()=>listItem.scrollIntoView({behavior: 'smooth', block: 'center'}),0)
+
     }
     
     groceryListItems.appendChild(listItem);

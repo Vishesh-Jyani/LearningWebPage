@@ -85,6 +85,13 @@ h1::first-letter {
     align-items: center;
 }
 
+@keyframes noticeMe {
+    50% {
+        background-color: rgb(133, 79, 31);
+        box-shadow: 0 0 3px;
+    }
+}
+
 .list-item-content {
     display: inline-block;
     border: 1px solid;
