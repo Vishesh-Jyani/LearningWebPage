@@ -9,6 +9,19 @@
   </head>
 
   <body>
+    <div class="form-bg">
+      <form class="add-item-form">
+        <h3>Add an Item</h3>
+        <span class="cross-icon">❌</span>
+        <label for="item-name">Name</label>
+        <input type="text" name="item-name" placeholder="Enter item name">
+  
+        <label for="item-quantity">Quantity</label>
+        <input type="number" name="item-quantity" placeholder="Enter Quantity">
+  
+        <button type="submit" name="submit-button">Save</button>
+      </form>
+    </div>
     <header>
         <div>
             <h1>Grocery List</h1>
@@ -23,17 +36,7 @@
               
         </div>
     </header>
-    <form class="add-item-form">
-      <h3>Add an Item</h3>
-      <span class="cross-icon">❌</span>
-      <label for="item-name">Name</label>
-      <input type="text" name="item-name" placeholder="Enter item name">
-
-      <label for="item-quantity">Quantity</label>
-      <input type="number" name="item-quantity" placeholder="Enter Quantity">
-
-      <button type="submit" name="submit-button">Save</button>
-    </form>
+    
     <div class="grocery-list-container">
       <ul class="grocery-list-items">
       </ul>

@@ -124,6 +124,15 @@ button:hover {
     box-shadow: none;
 }
 
+.form-bg {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(218, 215, 215, 0.13);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    display: none;
+}
+
 form.add-item-form {
     width: 30vw;
     position: fixed;
@@ -134,7 +143,7 @@ form.add-item-form {
     border-radius: 10px;
     background-color: white;
     border: 1px solid black;
-    box-shadow: 0 0 1000px 20px rgb(131, 106, 4);
+    box-shadow: 0 0 10px rgb(42, 42, 42);
     display: none;
 }
 
